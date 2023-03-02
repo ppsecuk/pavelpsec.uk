@@ -1,0 +1,5 @@
+.DS_Store
+.git
+*.pdf
+*.log
+error_log
