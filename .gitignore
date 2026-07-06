@@ -1,6 +1,12 @@
 .DS_Store
 .git
-*.pdf
-!Pavel_Psecuk_CV_20260626.pdf
+wp-config.php
 *.log
 error_log
+
+# Local wedding page assets.
+/wedding.shtml
+/wedding_*.jpg
+/dresscode.png
+/tallinn-botanic-garden.jpg
+/botanical_garden_tallinn.png
