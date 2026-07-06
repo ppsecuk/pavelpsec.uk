@@ -1,5 +1,6 @@
 .DS_Store
 .git
 *.pdf
+!Pavel_Psecuk_CV_20260626.pdf
 *.log
 error_log

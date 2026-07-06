@@ -1,1545 +1,1587 @@
-<!--
-theme author: W3layouts
-theme author URL: http://w3layouts.com
-website author: Pavel Psecuk
-website editor URL: https://pavelpsec.uk
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="/css/cookieconsent.min.css"/>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144110849-1"></script>
-    <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-144110849-1');
-
-
-    </script>
-
-    <title>Pavel Psecuk - my website</title>
-
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="keywords" content="Pavel Psecuk">
-    <meta name="description" content="Hello! I am Pavel Psecuk. Welcome to my own personal website which represents me as a professional in global IT industry and demonstrates my skills, goals, education and experience. Scroll down if you are interested!"/>
+    <title>Pavel Psecuk | AI-Driven DevOps Engineer and Tech Lead</title>
+    <meta name="description" content="Pavel Psecuk is an AI-driven DevOps Engineer and Tech Lead focused on cloud platforms, Kubernetes, infrastructure as code, observability, security, PCI-DSS, and reliable delivery.">
+    <meta name="keywords" content="Pavel Psecuk, Psecuk, Pavel Psecuk DevOps, AI-driven engineer, DevOps Engineer, Tech Lead, Kubernetes, AWS, Terraform, CI/CD, Observability, PCI-DSS">
+    <meta name="author" content="Pavel Psecuk">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://www.pavelpsec.uk/">
+    <meta property="og:title" content="Pavel Psecuk | AI-Driven DevOps Engineer and Tech Lead">
+    <meta property="og:description" content="Pavel Psecuk, AI-driven DevOps Engineer and Tech Lead focused on Kubernetes, cloud platforms, infrastructure automation, observability, security, and reliable delivery.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.pavelpsec.uk/">
+    <meta property="og:site_name" content="Pavel Psecuk">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://www.pavelpsec.uk/images/pavel_psecuk_portrait.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pavel Psecuk | AI-Driven DevOps Engineer and Tech Lead">
+    <meta name="twitter:description" content="Pavel Psecuk, AI-driven DevOps Engineer and Tech Lead focused on Kubernetes, cloud platforms, infrastructure automation, observability, security, and reliable delivery.">
+    <meta name="twitter:image" content="https://www.pavelpsec.uk/images/pavel_psecuk_portrait.jpg">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <style>
+        :root {
+            --ink: #101820;
+            --muted: #5b6470;
+            --line: #dce2e8;
+            --paper: #ffffff;
+            --soft: #f5f7fa;
+            --deep: #0d2d35;
+            --accent: #22e6cf;
+            --accent-strong: #087f75;
+            --accent-soft: #bff7ef;
+            --accent-wash: #eafffb;
+            --accent-glow: rgba(34, 230, 207, 0.32);
+            --header-height: 92px;
+            --shadow: 0 18px 45px rgba(16, 24, 32, 0.12);
+        }
 
-    <!-- Portfolio-CSS -->
-    <link rel="stylesheet" href="css/swipebox.css" type="text/css" media="all">
-    <link href="css/aos.css" rel="stylesheet" type="text/css" media="all"/>
-    <link rel="stylesheet" href="css/index.css">
+        * {
+            box-sizing: border-box;
+        }
 
-    <!-- custom-theme -->
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
-    <!-- //custom-theme -->
+        html {
+            scroll-behavior: smooth;
+        }
 
-    <!-- font-awesome-icons -->
-    <link href="css/font-awesome.css" rel="stylesheet">
-    <!-- //font-awesome-icons -->
+        body {
+            margin: 0;
+            color: var(--ink);
+            background: var(--paper);
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-size: 16px;
+            line-height: 1.65;
+        }
 
-    <!-- googlefonts -->
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;
-subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Cairo:200,300,400,600,700,900&amp;subset=arabic,latin-ext"
-          rel="stylesheet">
-    <!-- //googlefonts -->
+        a {
+            color: inherit;
+            text-decoration-thickness: 0.08em;
+            text-underline-offset: 0.22em;
+        }
 
-    <!--<script src="https://www.google.com/recaptcha/api.js" async defer></script>-->
+        img {
+            display: block;
+            max-width: 100%;
+        }
 
-    <script language="JavaScript">
-var frmvalidator  = new Validator("contactform");
-frmvalidator.addValidation("name","req","Please provide your name");
-frmvalidator.addValidation("email","req","Please provide your email");
-frmvalidator.addValidation("email","email",
-  "Please enter a valid email address");
+        .skip-link {
+            position: absolute;
+            left: 1rem;
+            top: -4rem;
+            z-index: 20;
+            padding: 0.75rem 1rem;
+            color: #fff;
+            background: var(--ink);
+        }
 
+        .skip-link:focus {
+            top: 1rem;
+        }
 
-    </script>
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 10;
+            border-bottom: 1px solid rgba(191, 247, 239, 0.12);
+            background: linear-gradient(180deg, rgba(28, 42, 48, 0.23), rgba(28, 42, 48, 0.13));
+            backdrop-filter: blur(20px) saturate(1.12);
+            transition: background 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+        }
+
+        .site-header.is-scrolled,
+        .site-header.is-menu-open,
+        .site-header:focus-within {
+            border-bottom-color: rgba(34, 230, 207, 0.1);
+            background: rgba(16, 24, 32, 0.46);
+            box-shadow: 0 12px 30px rgba(6, 12, 18, 0.09);
+        }
+
+        .nav {
+            width: min(1120px, calc(100% - 40px));
+            min-height: var(--header-height);
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.85rem;
+            color: #fff;
+            font-size: 1.15rem;
+            font-weight: 850;
+            text-decoration: none;
+        }
+
+        .brand-mark {
+            display: grid;
+            place-items: center;
+            width: 3rem;
+            height: 3rem;
+            border: 1px solid rgba(34, 230, 207, 0.34);
+            border-radius: 8px;
+            color: #fff;
+            background: rgba(34, 230, 207, 0.08);
+            font-size: 1rem;
+            letter-spacing: 0;
+        }
+
+        .menu-toggle {
+            display: none;
+            place-items: center;
+            width: 48px;
+            height: 48px;
+            border: 1px solid rgba(34, 230, 207, 0.32);
+            border-radius: 8px;
+            color: #fff;
+            background: rgba(34, 230, 207, 0.08);
+            cursor: pointer;
+        }
+
+        .menu-icon,
+        .menu-icon::before,
+        .menu-icon::after {
+            display: block;
+            width: 22px;
+            height: 2px;
+            border-radius: 999px;
+            background: currentColor;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+
+        .menu-icon {
+            position: relative;
+        }
+
+        .menu-icon::before,
+        .menu-icon::after {
+            content: "";
+            position: absolute;
+            left: 0;
+        }
+
+        .menu-icon::before {
+            transform: translateY(-6px);
+        }
+
+        .menu-icon::after {
+            transform: translateY(6px);
+        }
+
+        .nav[data-menu-open="true"] .menu-icon {
+            background: transparent;
+        }
+
+        .nav[data-menu-open="true"] .menu-icon::before {
+            transform: rotate(45deg);
+        }
+
+        .nav[data-menu-open="true"] .menu-icon::after {
+            transform: rotate(-45deg);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            min-height: 48px;
+            padding: 0 0.75rem;
+            color: rgba(255, 255, 255, 0.78);
+            font-size: 1.04rem;
+            font-weight: 750;
+            text-decoration: none;
+            transition: color 0.18s ease;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            right: 0.55rem;
+            bottom: 0.35rem;
+            left: 0.55rem;
+            height: 1px;
+            background: var(--accent);
+            opacity: 0;
+            transform: scaleX(0.45);
+            transform-origin: center;
+            transition: opacity 0.18s ease, transform 0.18s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus {
+            color: var(--accent-soft);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a:focus::after {
+            opacity: 0.9;
+            transform: scaleX(1);
+        }
+
+        .hero {
+            min-height: 100svh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            color: #fff;
+            background-image: url("images/hero-ai-cloud-infrastructure.jpg");
+            background-position: center;
+            background-size: cover;
+            isolation: isolate;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background: rgba(9, 17, 24, 0.34);
+        }
+
+        .hero-inner {
+            width: min(1120px, calc(100% - 40px));
+            margin: 0 auto;
+            padding: calc(var(--header-height) + 4rem) 0 5.85rem;
+        }
+
+        .eyebrow {
+            margin: 0 0 1rem;
+            color: var(--accent-strong);
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0;
+            text-transform: uppercase;
+        }
+
+        .hero .eyebrow,
+        .contact-panel .eyebrow {
+            color: var(--accent-soft);
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin: 0;
+            line-height: 1.1;
+        }
+
+        h1 {
+            max-width: 760px;
+            font-size: 4.4rem;
+            font-weight: 900;
+            letter-spacing: 0;
+        }
+
+        .hero-title {
+            max-width: 760px;
+            margin-top: 1.1rem;
+            font-size: 1.45rem;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .hero-copy {
+            max-width: 680px;
+            margin: 2.35rem 0 0;
+            color: rgba(255, 255, 255, 0.82);
+            font-size: 1.05rem;
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 2rem;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 44px;
+            padding: 0.72rem 1.05rem;
+            border: 1px solid transparent;
+            border-radius: 8px;
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+        .button.primary {
+            color: #fff;
+            background: var(--accent-strong);
+            box-shadow: 0 0 0 1px rgba(34, 230, 207, 0.2), 0 12px 32px var(--accent-glow);
+        }
+
+        .button.primary:hover,
+        .button.primary:focus {
+            color: #071014;
+            background: var(--accent);
+        }
+
+        .button.secondary {
+            color: #fff;
+            border-color: rgba(255, 255, 255, 0.35);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .button.secondary:hover,
+        .button.secondary:focus {
+            border-color: rgba(34, 230, 207, 0.58);
+            background: rgba(34, 230, 207, 0.1);
+        }
+
+        .hero-meta {
+            display: grid;
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+            gap: 1px;
+            max-width: 1060px;
+            margin-top: 3rem;
+            overflow: hidden;
+            border: 1px solid rgba(34, 230, 207, 0.24);
+            border-radius: 8px;
+            background: rgba(34, 230, 207, 0.12);
+        }
+
+        .metric {
+            min-height: 106px;
+            padding: 1rem;
+            background: rgba(9, 17, 24, 0.38);
+        }
+
+        .metric strong {
+            display: block;
+            font-size: 1.45rem;
+            line-height: 1.1;
+        }
+
+        .metric span {
+            display: block;
+            margin-top: 0.35rem;
+            color: rgba(255, 255, 255, 0.74);
+            font-size: 0.9rem;
+            line-height: 1.35;
+        }
+
+        .scroll-cue {
+            position: fixed;
+            left: 50%;
+            bottom: 1.25rem;
+            z-index: 1;
+            display: grid;
+            place-items: center;
+            width: 44px;
+            height: 44px;
+            margin: 0;
+            border: 1px solid rgba(34, 230, 207, 0.44);
+            border-radius: 999px;
+            background: rgba(34, 230, 207, 0.08);
+            text-decoration: none;
+            transform: translateX(-50%);
+            animation: cue-bob 1.8s ease-in-out infinite;
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.18s ease, visibility 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+        }
+
+        .scroll-cue.is-hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            animation: none;
+        }
+
+        .scroll-cue::before {
+            content: "";
+            width: 12px;
+            height: 12px;
+            border-right: 2px solid var(--accent-soft);
+            border-bottom: 2px solid var(--accent-soft);
+            transform: translateY(-2px) rotate(45deg);
+        }
+
+        .scroll-cue:hover,
+        .scroll-cue:focus {
+            border-color: rgba(34, 230, 207, 0.72);
+            background: rgba(34, 230, 207, 0.22);
+        }
+
+        @keyframes cue-bob {
+            0%,
+            100% {
+                transform: translate(-50%, 0);
+            }
+
+            50% {
+                transform: translate(-50%, 5px);
+            }
+        }
+
+        .section {
+            scroll-margin-top: calc(var(--header-height) + 1rem);
+            padding: 5rem 0;
+        }
+
+        .section.alt {
+            background: var(--soft);
+        }
+
+        .wrap {
+            width: min(1120px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        .section-heading {
+            margin-bottom: 2rem;
+        }
+
+        .section-heading h2 {
+            font-size: 2.35rem;
+        }
+
+        .about-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 0.95fr) minmax(290px, 0.55fr);
+            gap: 2.5rem;
+            align-items: start;
+        }
+
+        .lead {
+            margin: 0;
+            font-size: 1.18rem;
+            color: #293440;
+        }
+
+        .body-copy {
+            margin: 1rem 0 0;
+            color: var(--muted);
+        }
+
+        .about-summary {
+            display: grid;
+            gap: 1rem;
+            margin-top: 0.9rem;
+        }
+
+        .about-summary p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        .profile-panel {
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: var(--shadow);
+        }
+
+        .profile-panel img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            object-position: center 22%;
+        }
+
+        .profile-panel dl {
+            display: grid;
+            grid-template-columns: 92px minmax(0, 1fr);
+            gap: 0.7rem 1rem;
+            margin: 0;
+            padding: 1.25rem;
+        }
+
+        .profile-panel dt {
+            color: var(--accent-strong);
+            font-size: 0.78rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .profile-panel dd {
+            margin: 0;
+            min-width: 0;
+        }
+
+        .skills-grid,
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-group,
+        .project {
+            min-height: 100%;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: #fff;
+        }
+
+        .skill-group h3,
+        .project h3 {
+            display: block;
+            margin: 0 0 0.55rem;
+            font-size: 1.05rem;
+            line-height: 1.28;
+        }
+
+        .skill-group p,
+        .project p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .skill-group {
+            padding: 1.3rem;
+            border-top: 4px solid var(--accent);
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.45rem;
+            margin-top: 0.9rem;
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            min-height: 30px;
+            padding: 0.28rem 0.55rem;
+            border: 1px solid rgba(8, 127, 117, 0.22);
+            border-radius: 999px;
+            color: #17413e;
+            background: var(--accent-wash);
+            font-size: 0.82rem;
+            font-weight: 700;
+        }
+
+        .timeline {
+            display: grid;
+            gap: 0.9rem;
+        }
+
+        .role {
+            display: grid;
+            grid-template-columns: 190px minmax(0, 1fr);
+            gap: 1.35rem;
+            padding: 1.35rem;
+            border: 1px solid var(--line);
+            border-left: 4px solid var(--accent);
+            border-radius: 8px;
+            background: #fff;
+        }
+
+        .role-date {
+            color: var(--accent-strong);
+            font-size: 0.9rem;
+            font-weight: 900;
+            line-height: 1.35;
+        }
+
+        .role h3 {
+            font-size: 1.25rem;
+        }
+
+        .role-company {
+            margin-top: 0.25rem;
+            color: var(--muted);
+            font-weight: 800;
+        }
+
+        .role p {
+            margin: 0.75rem 0 0;
+            color: var(--muted);
+        }
+
+        .role-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.45rem;
+            margin-top: 0.85rem;
+        }
+
+        .role-tags span {
+            display: inline-flex;
+            align-items: center;
+            min-height: 28px;
+            padding: 0.24rem 0.52rem;
+            border: 1px solid rgba(8, 127, 117, 0.18);
+            border-radius: 999px;
+            color: #17413e;
+            background: var(--accent-wash);
+            font-size: 0.78rem;
+            font-weight: 800;
+        }
+
+        .credential-timeline {
+            display: grid;
+            gap: 0.9rem;
+        }
+
+        .credential-item {
+            display: grid;
+            grid-template-columns: 135px minmax(0, 1fr);
+            gap: 0.45rem;
+            padding: 1.35rem;
+            border: 1px solid var(--line);
+            border-left: 4px solid var(--accent);
+            border-radius: 8px;
+            background: #fff;
+        }
+
+        .credential-card {
+            min-width: 0;
+        }
+
+        .credential-card-header {
+            margin-bottom: 0;
+        }
+
+        .credential-icon {
+            display: inline-grid;
+            flex: 0 0 auto;
+            place-items: center;
+            width: 4.55rem;
+            height: 4.55rem;
+            color: rgba(8, 127, 117, 0.72);
+        }
+
+        .credential-icon svg {
+            width: 3.7rem;
+            height: 3.7rem;
+            stroke-width: 1.35;
+        }
+
+        .credential-date {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.65rem;
+            color: var(--accent-strong);
+            font-size: 0.9rem;
+            font-weight: 900;
+            line-height: 1.35;
+        }
+
+        .credential-date-text {
+            display: block;
+            width: min(100%, 7.5rem);
+            padding-bottom: 0.52rem;
+            border-bottom: 1px solid rgba(8, 127, 117, 0.16);
+        }
+
+        .credential-card h3 {
+            display: block;
+            min-width: 0;
+            margin: 0;
+            font-size: 1.25rem;
+            line-height: 1.28;
+        }
+
+        .credential-card p {
+            margin: 0.75rem 0 0;
+            color: var(--muted);
+        }
+
+        .credential-link {
+            display: inline-flex;
+            align-items: center;
+            min-height: 28px;
+            margin-top: 0.85rem;
+            margin-right: 0.45rem;
+            padding: 0.24rem 0.52rem;
+            border: 1px solid rgba(8, 127, 117, 0.18);
+            border-radius: 999px;
+            color: var(--accent-strong);
+            background: var(--accent-wash);
+            font-size: 0.78rem;
+            font-weight: 800;
+        }
+
+        .project {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .project img {
+            width: 100%;
+            aspect-ratio: 16 / 10;
+            object-fit: cover;
+            background: #dce2e8;
+        }
+
+        .project-body {
+            padding: 1.2rem;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.45rem;
+            margin-bottom: 0.7rem;
+        }
+
+        .project-body > .project-year {
+            margin-bottom: 0.7rem;
+        }
+
+        .project-year,
+        .project-tag {
+            display: inline-flex;
+            align-items: center;
+            min-height: 28px;
+            padding: 0.22rem 0.52rem;
+            border: 1px solid rgba(8, 127, 117, 0.18);
+            border-radius: 999px;
+            color: var(--accent-strong);
+            background: var(--accent-wash);
+            font-size: 0.78rem;
+            font-weight: 900;
+        }
+
+        .project a {
+            display: inline-flex;
+            margin-top: 0.9rem;
+            color: var(--accent-strong);
+            font-weight: 900;
+        }
+
+        .contact-panel {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            gap: 2rem;
+            align-items: center;
+            padding: 2rem;
+            border: 1px solid rgba(34, 230, 207, 0.22);
+            border-radius: 8px;
+            color: #fff;
+            background: var(--deep);
+        }
+
+        .contact-panel h2 {
+            font-size: 2rem;
+        }
+
+        .contact-panel p {
+            max-width: 680px;
+            margin: 0.75rem 0 0;
+            color: rgba(255, 255, 255, 0.78);
+        }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: flex-end;
+        }
+
+        .footer {
+            padding: 2rem 0;
+            border-top: 1px solid rgba(34, 230, 207, 0.16);
+            color: #65707c;
+            background: #0d141b;
+            font-size: 0.9rem;
+        }
+
+        .footer .wrap {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer a {
+            color: var(--accent-soft);
+        }
+
+        @media (max-width: 900px) {
+            :root {
+                --header-height: 78px;
+            }
+
+            .nav {
+                min-height: var(--header-height);
+                padding: 0.55rem 0;
+                align-items: center;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .menu-toggle {
+                display: grid;
+                margin-left: auto;
+            }
+
+            .nav-links {
+                width: 100%;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                margin-top: 0.45rem;
+                padding-top: 0.45rem;
+                border-top: 1px solid rgba(255, 255, 255, 0.14);
+            }
+
+            .nav[data-menu-open="false"] .nav-links {
+                display: none;
+            }
+
+            .nav[data-menu-open="true"] .nav-links {
+                display: flex;
+            }
+
+            .nav-links a {
+                display: block;
+                min-height: auto;
+                padding: 0.62rem 0;
+            }
+
+            .nav-links a::after {
+                right: auto;
+                bottom: 0.42rem;
+                left: 0;
+                width: 2.2rem;
+            }
+
+            .hero {
+                min-height: 100svh;
+                background-position: 56% center;
+            }
+
+            h1 {
+                font-size: 3.1rem;
+            }
+
+            .hero-title {
+                font-size: 1.22rem;
+            }
+
+            .hero-copy {
+                font-size: 1.05rem;
+            }
+
+            .hero-meta,
+            .skills-grid,
+            .project-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .about-layout,
+            .contact-panel {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-links {
+                justify-content: flex-start;
+            }
+        }
+
+        @media (max-width: 640px) {
+            :root {
+                --header-height: 76px;
+            }
+
+            .nav,
+            .wrap,
+            .hero-inner {
+                width: min(100% - 28px, 1120px);
+            }
+
+            .nav-links a {
+                font-size: 0.86rem;
+            }
+
+            .hero {
+                min-height: 100svh;
+                background-position: 61% center;
+            }
+
+            .hero-meta {
+                margin-top: max(3rem, 38svh);
+            }
+
+            h1 {
+                font-size: 2.35rem;
+            }
+
+            .hero-copy {
+                font-size: 1.05rem;
+            }
+
+            .section {
+                padding: 3.5rem 0;
+            }
+
+            .section-heading h2,
+            .contact-panel h2 {
+                font-size: 1.85rem;
+            }
+
+            .hero-meta,
+            .skills-grid,
+            .project-grid,
+            .role,
+            .credential-item {
+                grid-template-columns: 1fr;
+            }
+
+            .metric {
+                min-height: 88px;
+            }
+
+            .profile-panel dl {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-panel {
+                padding: 1.35rem;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .scroll-cue {
+                animation: none;
+            }
+        }
+    </style>
 </head>
+<body id="top">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="Professional profile home">
+            <span class="brand-mark">PP</span>
+            <span>Professional Profile</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="menu-icon" aria-hidden="true"></span>
+        </button>
+        <ul class="nav-links" id="primary-menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Expertise</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#portfolio">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-<!-- banner -->
-<div class="banner" id="home">
-    <div class="agileinfo-dot">
-        <div class="container">
-            <!-- header -->
-            <div class="header-w3layouts">
-                <!-- Navigation -->
-                <nav class="navbar navbar-default navbar-fixed-top">
-                    <div class="navbar-header page-scroll">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse"
-                                data-target=".navbar-ex1-collapse">
-                            <span class="sr-only"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <h1><a class="navbar-brand" href="index.html">demo website</a></h1>
-                    </div>
-                    <div class="collapse navbar-collapse navbar-ex1-collapse">
-                        <ul class="nav navbar-nav navbar-right cl-effect-15">
-                            <li class="hidden"><a class="page-scroll" href="#page-top"></a></li>
-                            <li><a class="page-scroll scroll" href="#home">Home</a></li>
-                            <li><a class="page-scroll scroll" href="#about">About</a></li>
-                            <li><a class="page-scroll scroll" href="#goals">Goals</a></li>
-                            <li><a class="page-scroll scroll" href="#education">Education & Experience </a></li>
-                            <li><a class="page-scroll scroll" href="#portfolio">Portfolio</a></li>
-                            <li><a class="page-scroll scroll" href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-                </nav>
-				<!-- //Navigation -->
+<main id="main">
+    <section class="hero" id="home" aria-label="Pavel Psecuk professional profile">
+        <div class="hero-inner">
+            <p class="eyebrow">AI-driven DevOps Engineer and Tech Lead</p>
+            <h1>Pavel Psecuk</h1>
+            <p class="hero-copy">I design, automate, and operate Kubernetes, CI/CD, IaC, observability, and compliance-focused infrastructure for teams that need predictable delivery and strong production ownership.</p>
+            <div class="actions" aria-label="Profile actions">
+                <a class="button primary" href="/web/viewer.html?file=%2FPavel_Psecuk_CV_20260626.pdf%3Fv%3Dno-europass-20260630" target="_blank" rel="noopener noreferrer">View CV</a>
+                <a class="button secondary" href="mailto:pavel.psecuk@gmail.com">Email</a>
+                <a class="button secondary" href="https://www.linkedin.com/in/pavel-psecuk/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a class="button secondary" href="https://github.com/ppsecuk" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
-            <!-- //header -->
-            <div class="w3_banner_info">
-                <div class="w3_banner_info_grid">
-                    <h2 data-aos="fade-right">Hello! I am </h2>
-                    <h2 data-aos="fade-right">Pavel Psecuk.</h2>
-                    <h5>Senior DevOps Engineer / SRE</h5>
-                    <p><font color="#FFFFFF">Welcome to my own personal website which represents me as a professional in global IT industry and demonstrates my skills, goals, education and experience. Scroll
-                        down if you are interested!</font></p>
-                    <ul data-aos="slide-up">
-                        <li><a href="#" class="w3ls_more" data-toggle="modal" data-target="#myModal">Find out more</a></li>
-                        <li><a href="/web/viewer.html?file=%2FPavel_Psecuk_CV_20230303.pdf" class="w3ls_more"><i
-                                class="fa fa-download" aria-hidden="true"></i> View CV</a></li>
-                    </ul>
+            <div class="hero-meta" aria-label="Professional highlights">
+                <div class="metric">
+                    <strong>10+ years</strong>
+                    <span>IT operations, support, system engineering and automation</span>
+                </div>
+                <div class="metric">
+                    <strong>6+ years</strong>
+                    <span>DevOps, SRE, cloud, and platform engineering</span>
+                </div>
+                <div class="metric">
+                    <strong>2+ years</strong>
+                    <span>People management and technical leadership</span>
+                </div>
+                <div class="metric">
+                    <strong>AI-first</strong>
+                    <span>Prompted, reviewed, and automated engineering workflows</span>
+                </div>
+                <div class="metric">
+                    <strong>CKA</strong>
+                    <span>Certified Kubernetes Administrator</span>
+                </div>
+                <div class="metric">
+                    <strong>2024</strong>
+                    <span>Best Infrastructure Engineer at Wallester AS</span>
                 </div>
             </div>
-            <div class="thim-click-to-bottom">
-                <a href="#about" class="scroll">
-                    <i class="fa fa-arrows-v" aria-hidden="true"></i>
-                </a>
+            <a class="scroll-cue" href="#about" aria-label="Scroll to About"></a>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <div class="wrap about-layout">
+            <div class="about-main">
+                <p class="eyebrow">About</p>
+                <div class="about-summary">
+                    <p>I lead complex infrastructure and platform engineering initiatives across cloud architecture, Kubernetes operations, CI/CD modernization, infrastructure automation, observability, security, compliance, and reliability engineering. My responsibilities include designing scalable cloud solutions, managing PCI-DSS compliant infrastructure, leading production database migrations, provisioning and operating Kubernetes environments and clusters, redesigning CI/CD platforms, implementing monitoring and alerting systems, maintaining large-scale Infrastructure as Code codebases, improving cloud cost efficiency, strengthening security posture, defining DevOps standards, planning technical roadmaps, mentoring engineers, and driving operational excellence across the organization.</p>
+                    <p>I am calm under pressure, highly detail-oriented, stress-resistant, and a fast learner. I combine critical thinking with strong technical judgment to identify risks early and prevent issues before they impact clients.</p>
+                </div>
+            </div>
+            <aside class="profile-panel" aria-label="Profile details">
+                <img src="IMG_4579.jpg" alt="Portrait of Pavel Psecuk">
+                <dl>
+                    <dt>Location</dt>
+                    <dd>Estonia</dd>
+                    <dt>Focus</dt>
+                    <dd>AI, Cloud, Kubernetes, DevOps</dd>
+                </dl>
+            </aside>
+        </div>
+    </section>
+
+    <section class="section alt" id="skills">
+        <div class="wrap">
+            <div class="section-heading">
+                <h2>Core expertise</h2>
+            </div>
+            <div class="skills-grid">
+                <article class="skill-group">
+                    <h3>Cloud and runtime</h3>
+                    <p>AWS, GCP, Kubernetes, Docker, Helm, ingress, load balancing, service mesh, and environment provisioning.</p>
+                    <div class="tags">
+                        <span class="tag">AWS</span>
+                        <span class="tag">GCP</span>
+                        <span class="tag">Kubernetes</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">Helm</span>
+                    </div>
+                </article>
+                <article class="skill-group">
+                    <h3>Infrastructure as code</h3>
+                    <p>Terraform, CloudFormation, YAML, reusable modules, state hygiene, reviewable changes, and environment parity.</p>
+                    <div class="tags">
+                        <span class="tag">Terraform</span>
+                        <span class="tag">CloudFormation</span>
+                        <span class="tag">YAML</span>
+                        <span class="tag">GitOps</span>
+                    </div>
+                </article>
+                <article class="skill-group">
+                    <h3>AI, delivery, and automation</h3>
+                    <p>AI-assisted engineering workflows, build and deployment systems, GitHub, GitLab, Jenkins, Spinnaker, AWS DevTools, Bash, Python, Ansible, and Lambda.</p>
+                    <div class="tags">
+                        <span class="tag">AI workflows</span>
+                        <span class="tag">CI/CD</span>
+                        <span class="tag">Bash</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Ansible</span>
+                    </div>
+                </article>
+                <article class="skill-group">
+                    <h3>Data and messaging</h3>
+                    <p>PostgreSQL, RDS, MySQL, Redis, Kafka, Kinesis, Firehose, SQS, backups, migrations, and production-safe changes.</p>
+                    <div class="tags">
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">RDS</span>
+                        <span class="tag">Redis</span>
+                        <span class="tag">Kafka</span>
+                    </div>
+                </article>
+                <article class="skill-group">
+                    <h3>Observability and operations</h3>
+                    <p>Grafana, Prometheus, ELK, Datadog, alerting, incident support, capacity planning, and root-cause analysis.</p>
+                    <div class="tags">
+                        <span class="tag">Grafana</span>
+                        <span class="tag">Prometheus</span>
+                        <span class="tag">ELK</span>
+                        <span class="tag">Datadog</span>
+                    </div>
+                </article>
+                <article class="skill-group">
+                    <h3>Security and FinOps</h3>
+                    <p>IAM, RBAC, GuardDuty, Inspector, secret management, vulnerability scanning, cost optimization, Savings Plans, and Reserved Instances.</p>
+                    <div class="tags">
+                        <span class="tag">IAM</span>
+                        <span class="tag">RBAC</span>
+                        <span class="tag">PCI-DSS</span>
+                        <span class="tag">FinOps</span>
+                    </div>
+                </article>
             </div>
         </div>
+    </section>
+
+    <section class="section" id="experience">
+        <div class="wrap">
+            <div class="section-heading">
+                <h2>Experience</h2>
+            </div>
+            <div class="timeline">
+                <article class="role">
+                    <div class="role-date">May 2025 to present</div>
+                    <div>
+                        <h3>Head of Cloud Infrastructure</h3>
+                        <div class="role-company">Wallester · Tallinn, Estonia</div>
+                        <p>Lead cloud infrastructure and platform reliability for a FinTech environment, covering Kubernetes operations, cloud architecture, PCI-DSS-aware infrastructure, CI/CD modernization, observability, security posture, cost efficiency, and engineering standards.</p>
+                        <div class="role-tags" aria-label="Role focus areas">
+                            <span>Cloud strategy</span>
+                            <span>Kubernetes</span>
+                            <span>PCI-DSS</span>
+                            <span>Leadership</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="role">
+                    <div class="role-date">May 2022 to May 2025</div>
+                    <div>
+                        <h3>Senior DevOps Engineer</h3>
+                        <div class="role-company">Wallester · Tallinn, Estonia</div>
+                        <p>Owned production DevOps delivery across Kubernetes, infrastructure as code, GitOps, monitoring, database migrations, incident support, and automation. Improved deployment reliability, operational visibility, and platform maintainability across production and non-production systems.</p>
+                        <div class="role-tags" aria-label="Role focus areas">
+                            <span>AWS</span>
+                            <span>Kubernetes</span>
+                            <span>CI/CD</span>
+                            <span>Terraform</span>
+                            <span>GitOps</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="role">
+                    <div class="role-date">Dec 2019 to Apr 2022</div>
+                    <div>
+                        <h3>DevOps Engineer</h3>
+                        <div class="role-company">Breakwater Technology · Tallinn, Estonia</div>
+                        <p>Built and maintained cloud infrastructure, deployment pipelines, monitoring, automation, and environment operations for gambling technology platforms, supporting reliable releases and fast incident investigation.</p>
+                        <div class="role-tags" aria-label="Role focus areas">
+                            <span>GCP</span>
+                            <span>CI/CD</span>
+                            <span>Automation</span>
+                            <span>Monitoring</span>
+                            <span>Environments</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="role">
+                    <div class="role-date">Mar 2019 to Nov 2019</div>
+                    <div>
+                        <h3>System Engineer</h3>
+                        <div class="role-company">Kuehne + Nagel · Tallinn, Estonia</div>
+                        <p>Supported enterprise logistics applications and system operations across Linux, Java, SQL, and Oracle DB, translating production issues into clear technical investigation and remediation paths.</p>
+                        <div class="role-tags" aria-label="Role focus areas">
+                            <span>Linux</span>
+                            <span>Java</span>
+                            <span>SQL</span>
+                            <span>Oracle DB</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="role">
+                    <div class="role-date">Feb 2015 to Mar 2019</div>
+                    <div>
+                        <h3>Senior IT Specialist</h3>
+                        <div class="role-company">Tieto · Tallinn, Estonia</div>
+                        <p>Delivered multilingual IT operations support, database administration tasks, incident handling, knowledge base improvements, project support, onboarding, and training across enterprise support workflows.</p>
+                        <div class="role-tags" aria-label="Role focus areas">
+                            <span>IT operations</span>
+                            <span>Support</span>
+                            <span>DBA tasks</span>
+                            <span>Training</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="wrap">
+            <div class="section-heading">
+                <h2>Education and achievements</h2>
+            </div>
+            <div class="credential-timeline">
+                <article class="credential-item">
+                    <div class="credential-date">
+                        <span class="credential-date-text">2007 to 2010</span>
+                        <span class="credential-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m22 10-10-5-10 5 10 5 10-5Z"></path>
+                                <path d="M6 12v5c3 2 9 2 12 0v-5"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="credential-card">
+                        <div class="credential-card-header">
+                            <h3>IT professional diploma</h3>
+                        </div>
+                        <p>Business &amp; IT educational center. Information technology, programming, software and hardware maintenance.</p>
+                        <a class="credential-link" href="/web/viewer.html?file=%2FSecondary%2Bprofession_certificate(Lithuanian).pdf">View certificate</a>
+                    </div>
+                </article>
+                <article class="credential-item">
+                    <div class="credential-date">
+                        <span class="credential-date-text">2014</span>
+                        <span class="credential-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h12l4 4v12H4z"></path>
+                                <path d="M16 4v4h4"></path>
+                                <path d="M8 12h8"></path>
+                                <path d="M8 16h5"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="credential-card">
+                        <div class="credential-card-header">
+                            <h3>Recommendation letter</h3>
+                        </div>
+                        <p>Professional recommendation letter from Arvato.</p>
+                        <a class="credential-link" href="/web/viewer.html?file=%2FRecommendation_letter(Arvato).pdf">Arvato</a>
+                    </div>
+                </article>
+                <article class="credential-item">
+                    <div class="credential-date">
+                        <span class="credential-date-text">2015 to 2018</span>
+                        <span class="credential-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m22 10-10-5-10 5 10 5 10-5Z"></path>
+                                <path d="M6 12v5c3 2 9 2 12 0v-5"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="credential-card">
+                        <div class="credential-card-header">
+                            <h3>Bachelor degree</h3>
+                        </div>
+                        <p>In Business Management from University of Euroakadeemia.</p>
+                        <a class="credential-link" href="/web/viewer.html?file=%2FBachelor_certificate(Estonian).pdf">View certificate</a>
+                    </div>
+                </article>
+                <article class="credential-item">
+                    <div class="credential-date">
+                        <span class="credential-date-text">2019</span>
+                        <span class="credential-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h12l4 4v12H4z"></path>
+                                <path d="M16 4v4h4"></path>
+                                <path d="M8 12h8"></path>
+                                <path d="M8 16h5"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="credential-card">
+                        <div class="credential-card-header">
+                            <h3>Recommendation letter</h3>
+                        </div>
+                        <p>Professional recommendation letter from Tieto.</p>
+                        <a class="credential-link" href="/web/viewer.html?file=%2FRecommendation_letter(Tieto).pdf">Tieto</a>
+                    </div>
+                </article>
+                <article class="credential-item">
+                    <div class="credential-date">
+                        <span class="credential-date-text">2019</span>
+                        <span class="credential-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m9 18-6-6 6-6"></path>
+                                <path d="m15 6 6 6-6 6"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="credential-card">
+                        <div class="credential-card-header">
+                            <h3>Java from scratch</h3>
+                        </div>
+                        <p>Software Development Academy. Java, OOP, HTML/CSS, SQL/noSQL, testing, Spring, Scrum, Hibernate, and JDBC.</p>
+                        <a class="credential-link" href="/web/viewer.html?file=%2FJava_developer_certificate(English).pdf">View certificate</a>
+                    </div>
+                </article>
+                <article class="credential-item">
+                    <div class="credential-date">
+                        <span class="credential-date-text">2020</span>
+                        <span class="credential-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h12l4 4v12H4z"></path>
+                                <path d="M16 4v4h4"></path>
+                                <path d="M8 12h8"></path>
+                                <path d="M8 16h5"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="credential-card">
+                        <div class="credential-card-header">
+                            <h3>Recommendation letter</h3>
+                        </div>
+                        <p>Software Development Academy recommendation after Java from scratch studies.</p>
+                        <a class="credential-link" href="/web/viewer.html?file=%2FRecommendation_letter(SDA).pdf">SDA</a>
+                    </div>
+                </article>
+                <article class="credential-item">
+                    <div class="credential-date">
+                        <span class="credential-date-text">2022</span>
+                        <span class="credential-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 13c0 5-3.5 7.5-8 8.8C7.5 20.5 4 18 4 13V6l8-3 8 3v7Z"></path>
+                                <path d="m9 12 2 2 4-5"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="credential-card">
+                        <div class="credential-card-header">
+                            <h3>Certified Kubernetes Administrator</h3>
+                        </div>
+                        <p>The Linux Foundation.</p>
+                        <a class="credential-link" href="/web/viewer.html?file=%2Fpavel-psecuk-cka-certificate.pdf">View certificate</a>
+                    </div>
+                </article>
+                <article class="credential-item">
+                    <div class="credential-date">
+                        <span class="credential-date-text">2024</span>
+                        <span class="credential-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="5"></circle>
+                                <path d="m8.5 12.5-1.5 8 5-3 5 3-1.5-8"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="credential-card">
+                        <div class="credential-card-header">
+                            <h3>Best Infrastructure Engineer</h3>
+                        </div>
+                        <p>Wallester AS.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section alt" id="portfolio">
+        <div class="wrap">
+            <div class="section-heading">
+                <h2>Pet projects</h2>
+            </div>
+            <div class="project-grid">
+                <article class="project">
+                    <img src="images/portfolio/project1/cover.png" alt="Rimgova.lt website preview">
+                    <div class="project-body">
+                        <span class="project-year">2011</span>
+                        <h3>Rimgova.lt - simple website</h3>
+                        <p>Simple customer website built with HTML/CSS, Linux hosting, SSH, SFTP, and hands-on web operations.</p>
+                    </div>
+                </article>
+                <article class="project">
+                    <img src="images/portfolio/project2/cover.png" alt="EWar.lt gaming project preview">
+                    <div class="project-body">
+                        <span class="project-year">2015</span>
+                        <h3>EWar.lt - gaming project</h3>
+                        <p>Large self-hosted gaming project across Linux servers, PHP/MySQL, IPBoard, monitoring, marketing, staff operations, and shell automation.</p>
+                    </div>
+                </article>
+                <article class="project">
+                    <img src="images/portfolio/project3/cover.png" alt="WorldGamers gaming project preview">
+                    <div class="project-body">
+                        <span class="project-year">2018</span>
+                        <h3>WorldGamers - gaming project</h3>
+                        <p>Gaming community project covering server operations, testing, launch coordination, maintenance, analytics, and marketing support.</p>
+                    </div>
+                </article>
+                <article class="project">
+                    <img src="images/portfolio/project4/cover.png" alt="pavelpsec.uk project preview">
+                    <div class="project-body">
+                        <span class="project-year">2019</span>
+                        <h3>Personal website</h3>
+                        <p>A long-running personal web presence used to keep CV material, certificates, recommendations, and portfolio references available.</p>
+                    </div>
+                </article>
+                <article class="project">
+                    <img src="images/portfolio/project6/cover.png" alt="Social media website preview">
+                    <div class="project-body">
+                        <span class="project-year">2019</span>
+                        <h3>Java / Spring social media project</h3>
+                        <p>Final project from Software Development Academy using Java/Spring and supporting web technologies.</p>
+                    </div>
+                </article>
+                <article class="project">
+                    <img src="images/portfolio/project5/cover.png" alt="propercases.com ecommerce project preview">
+                    <div class="project-body">
+                        <span class="project-year">2019</span>
+                        <h3>propercases.com - ecommerce project</h3>
+                        <p>Ecommerce project built with HTML/CSS on Shopify, including store setup, product presentation, and marketing channel preparation.</p>
+                    </div>
+                </article>
+                <article class="project">
+                    <img src="images/portfolio/project7/cover.png" alt="Redesigned personal website preview">
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="project-year">2026</span>
+                            <span class="project-tag">AI</span>
+                        </div>
+                        <h3>Redesigned personal website</h3>
+                        <p>Modern professional website rebuild focused on AI-driven DevOps positioning, responsive design, CV and certification access, SEO, and portfolio presentation.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <div class="wrap">
+            <div class="contact-panel">
+                <div>
+                    <p class="eyebrow">Contact</p>
+                    <h2>Open to serious infrastructure, SRE, DevOps, and platform engineering conversations.</h2>
+                </div>
+                <div class="contact-links">
+                    <a class="button primary" href="mailto:pavel.psecuk@gmail.com">Email Pavel</a>
+                    <a class="button secondary" href="https://www.linkedin.com/in/pavel-psecuk/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a class="button secondary" href="/web/viewer.html?file=%2FPavel_Psecuk_CV_20260626.pdf%3Fv%3Dno-europass-20260630" target="_blank" rel="noopener noreferrer">CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="wrap">
+        <span>&copy; 2026 Pavel Psecuk. All rights reserved.</span>
+        <span><a href="#top">Back to top</a></span>
     </div>
-</div>
-<!-- banner -->
-
-<!-- bootstrap-modal-pop-up -->
-<!-- modal -->
-<div class="modal about-modal fade" id="myModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div align="right">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-                <!--<h4 class="modal-title">About Me</h4>-->
-            </div>
-            <div class="modal-body">
-
-                <div class="modalpad">
-                    <div class="modalpop ">
-                        <img src="images/pavel_psecuk_side.jpg" class="img-responsive" alt=""/>
-                    </div>
-                    <div class="about-modal wthree">
-                        <h3><span>Mr. Pavel Psecuk</span></h3>
-                        <h4></h4>
-                        <ul class="address">
-                            <li>
-                                <ul class="agileits-address-text ">
-                                    <li><b>D.O.B.</b></li>
-                                    <br>
-                                    <li>07 - October - 1990</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <ul class="agileits-address-text">
-                                    <li><b>PASSIONS </b></li>
-                                    <br>
-                                    <li>Programming/scripting, automation, preventing issues</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <ul class="agileits-address-text">
-                                    <li><b>EMAIL </b></li>
-                                    <br>
-                                    <li><u><a href="mailto:pavel.psecuk@gmail.com"> pavel.psecuk@gmail.com</a></u></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <ul class="agileits-address-text">
-                                    <li><b>LINKEDIN </b></li>
-                                    <br>
-                                    <li><u><a href="https://www.linkedin.com/in/pavel-psecuk/" target="_blank">https://linkedin.com/in/pavel-psecuk/</a></u>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- //modal -->
-<!-- //bootstrap-modal-pop-up -->
-
-<p><a name="about"></a></p>
-<!-- about -->
-<div class="about" id="about">
-    <h3 data-aos="zoom-in">About me</h3>
-    <div class="col-md-6 about-left">
-        <!--<h3 data-aos="slide-up">Hello</h3>-->
-        <p><b>Skill stack:</b><br> AWS, GCP, Kubernetes, Docker, CI/CD (Gitlab, Jenkins, Spinnaker), Terraform, Git, Linux, scripting/automation, monitoring (Datadog, Grafana/Prometheus, ELK), Kafka, DBA, programming basics (Python, Java, GO, Bash). <br></p>
-        <p><b>About me:</b><br> I'm a certified Senior DevOps Engineer with years of experience in complex tasks such as production database migrations, rolling out new kubernetes environments and clusters, redesigning and rebuilding CI/CD systems, creating from scratch incident management and monitoring solutions, maintaining huge IaC scripts and other. I'm stress-resistant, calm minded, very attentive to details, fast-learner. I'm using my critical thinking and technical skills to prevent issues before customers face them. I'm a permanent solution person and always think about the side effects of my work. I'm a perfectionist so I won't stop before it gets perfect (means never). In my spare time I'm usually travelling, cycling and playing volleyball.</p>
-        <p><b>2023 goals:</b><br> AWS certification, B2B (contract) employment, remote role, python advanced.
-        </p>
-        <img src="images/signature.png" alt=""/>
-    </div>
-    <br>
-    <div data-aos="flip-right" class="col-md-6 about-right">
-        <img src="images/pavel_psecuk_portrait.jpg" alt=""/>
-    </div>
-    <div class="clearfix"></div>
-</div>
-<!-- //about -->
-
-<!-- goals -->
-<div class="skills" id="goals">
-    <div class="container">
-        <h3 data-aos="zoom-in">My goals for 2023</h3>
-        <div class="skill-grids">
-            <div class="col-md-6 skill-grids-left">
-                <div data-aos="flip-left" class="col-md-6 w3labout-img">
-                    <div class="boxw3-agile">
-                        <img src="images/pavel-psecuk-devops.jpeg" alt="" class="img-responsive"/>
-                        <div class="agile-caption">
-                            <h3>DevOps</h3>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-                <div data-aos="flip-right" class="col-md-6 w3labout-img">
-                    <div class="boxw3-agile">
-                        <img src="images/s5.jpg" alt="" class="img-responsive"/>
-                        <div class="agile-caption">
-                            <h3>Coding</h3>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-                <div data-aos="flip-left" class="col-md-6 w3labout-img">
-                    <div class="boxw3-agile">
-                        <img src="images/s7.jpg" alt="" class="img-responsive"/>
-                        <div class="agile-caption">
-                            <h3>Linux</h3>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-                <div data-aos="flip-right" class="col-md-6 w3labout-img">
-                    <div class="boxw3-agile">
-                        <img src="images/s6.jpg" alt="" class="img-responsive"/>
-                        <div class="agile-caption">
-                            <h3>Web admin</h3>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-                <div data-aos="flip-right" class="col-md-6 w3labout-img">
-                    <div class="boxw3-agile">
-                        <img src="images/s8.jpg" alt="" class="img-responsive"/>
-                        <div class="agile-caption">
-                            <h3>SQL</h3>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-                <div data-aos="flip-right" class="col-md-6 w3labout-img">
-                    <div class="boxw3-agile">
-                        <img src="images/s12.jpg" alt="" class="img-responsive"/>
-                        <div class="agile-caption">
-                            <h3>DBA</h3>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-                <div data-aos="flip-right" class="col-md-6 w3labout-img">
-                    <div class="boxw3-agile">
-                        <img src="images/s9.jpg" alt="" class="img-responsive"/>
-                        <div class="agile-caption">
-                            <h3>Windows</h3>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-                <div data-aos="flip-right" class="col-md-6 w3labout-img">
-                    <div class="boxw3-agile">
-                        <img src="images/s10.png" alt="" class="img-responsive"/>
-                        <div class="agile-caption">
-                            <h3>Git</h3>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-
-            <div class="col-md-6 skill-grids-right"><font size="1"><i>updated on: March 2, 2023<br></i></font><br>
-                <div class="skillbar clearfix " data-percent="100%">
-                    <div class="skillbar-bar" style="background:#46a049"></div>
-                    <div class="skill-bar-percent">Senior DevOps Engineer</div>
-                    <div class="skill-bar-percent-left">100%</div>
-                </div>
-
-                <div class="skillbar clearfix " data-percent="100%">
-                    <div class="skillbar-bar" style="background:#46a049"></div>
-                    <div class="skill-bar-percent">Certified Kubernetes Administrator (CKA)</div>
-                    <div class="skill-bar-percent-left">100%</div>
-                </div>
-
-                <div class="skillbar clearfix " data-percent="100%">
-                    <div class="skillbar-bar" style="background:#46a049"></div>
-                    <div class="skill-bar-percent">Terraform advanced knowledge</div>
-                    <div class="skill-bar-percent-left">100%</div>
-                </div>
-                
-                <div class="skillbar clearfix " data-percent="50%">
-                    <div class="skillbar-bar" style="background:lightgrey"></div>
-                    <div class="skill-bar-percent">Python advanced knowledge</div>
-                    <div class="skill-bar-percent-left">50%</div>
-                </div>
-                
-                <div class="skillbar clearfix " data-percent="30%">
-                    <div class="skillbar-bar" style="background:lightgrey"></div>
-                    <div class="skill-bar-percent">Remote role</div>
-                    <div class="skill-bar-percent-left">30%</div>
-                </div>
-
-                <div class="skillbar clearfix " data-percent="10%">
-                    <div class="skillbar-bar" style="background:lightgrey"></div>
-                    <div class="skill-bar-percent">B2B (contract) employment</div>
-                    <div class="skill-bar-percent-left">10%</div>
-                </div>
-
-                <div class="skillbar clearfix " data-percent="10%">
-                    <div class="skillbar-bar" style="background:lightgrey"></div>
-                    <div class="skill-bar-percent">AWS certification</div>
-                    <div class="skill-bar-percent-left">10%</div>
-                </div>
-                <!-- //Goals -->
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-</div>
-<!-- //goals -->
-
-<!-- /education -->
-<div class="education" id="education">
-    <div class="col-md-5 education-w3l">
-        <h3 data-aos="zoom-in" class="w3l_head three">My Education:</h3>
-        <hr>
-        <div class="education-agile-grids">
-            <div class="education-agile-w3l">
-                <div class="education-agile-w3l-year">
-                    <h4>10-11/2022</h4><h6><font color="black">2 months</font></h6>
-                    <h6><br>Certified Kubernetes Administrator</h6>
-                </div>
-                <div class="education-agile-w3l-info">
-                    <h4><a href="https://www.linuxfoundation.org/" target="_blank">The Linux Foundation</a></h4>
-                    <p>Certified Kubernetes Administrator achievement from The Linux Foundation.</p><br>
-                    <form action="/web/viewer.html?file=%2Fpavel-psecuk-cka-certificate.pdf" target="_blank"
-                          method="post">
-                        <input type="submit" value="View Certificate"/>
-                    </form>
-                </div>
-                <div class="clearfix"></div>
-                <hr>
-            </div>
-            <div class="education-agile-w3l">
-                <div class="education-agile-w3l-year">
-                    <h4>3-12/2019</h4><h6><font color="black">9 months</font></h6>
-                    <h6><br>Junior Java Developer</h6>
-                </div>
-                <div class="education-agile-w3l-info">
-                    <h4><a href="https://sdacademy.ee/" target="_blank">Software Development Academy</a></h4>
-                    <p>378 regular hours of theoretical and practical workshops as part-time/extramural studies of Java/OOP, HTML/CSS, SQL/noSQL, Software testing, Spring, Scrum, Hibernate, JDBC and other. With trainers assistance (senior developers) we've developed such different projects as Battle simulation game, Supermarket checkout system, Social media website and other.</p><br>
-                    <form action="/web/viewer.html?file=%2FJava_developer_certificate(English).pdf" target="_blank"
-                          method="post">
-                        <input type="submit" value="View Certificate"/>
-                    </form>
-                    <br>
-                    <form action="/web/viewer.html?file=%2FRecommendation_letter(SDA).pdf" target="_blank"
-                          method="post">
-                        <input type="submit" value="View Recommendation Letter"/>
-                    </form>
-                </div>
-                <div class="clearfix"></div>
-                <hr>
-            </div>
-            <div class="education-agile-w3l two">
-                <div class="education-agile-w3l-year">
-                    <h4>2018-now</h4>
-                    <h6><font color="black"><p id="TimeInUdemy"></p></font></h6>
-                </div>
-                <div class="education-agile-w3l-info">
-                    <h4><a href="https://www.udemy.com" target="_blank">Udemy.com - self education</a></h4>
-                    <p>During my spare time I'm constantly learning online. My passionate courses are mainly: DevOps toolchain, Java, Python, SQL, HTML/CSS, Linux administration, Bash/Shell scripting, Oracle DBA, SEO and other.</p><br>
-                </div>
-                <div class="clearfix"></div>
-                <hr>
-            </div>
-            <div class="education-agile-w3l two">
-                <div class="education-agile-w3l-year">
-                    <h4>2015-2018</h4><h6><font color="black">3 years</font></h6>
-                    <h6><br>Bachelor in Business Management</h6>
-                </div>
-                <div class="education-agile-w3l-info">
-                    <h4><a href="http://euroakadeemia.ee/en/" target="_blank">University of Euroakadeemia</a></h4>
-                    <p>I earned my Bachelor's Degree in Business Management in local Estonian university. We have been studying physical/virtual business, office work management, money and banking, logistics, marketing, economics, informatics and more.</p><br>
-                    <form action="/web/viewer.html?file=%2FBachelor_certificate(Estonian).pdf" target="_blank"
-                          method="post">
-                        <input type="submit" value="View Certificate"/>
-                    </form>
-                </div>
-                <div class="clearfix"></div>
-                <hr>
-            </div>
-            <div class="education-agile-w3l">
-                <div class="education-agile-w3l-year last">
-                    <h4>2007-2010</h4><h6><font color="black">3 years</font></h6>
-                    <h6><br>IT professional diploma</h6>
-                </div>
-                <div class="education-agile-w3l-info last">
-                    <h4><a href="http://www.vpm.lt/" target="_blank">Business & IT educational center</a></h4>
-                    <p>Secondary education together with professional degree in IT. Basic knowledge of Information Technology, programming, software/hardware maintenance, Windows,
-                        Microsoft Office and other.</p><br>
-                    <form action="/web/viewer.html?file=%2FSecondary+profession_certificate(Lithuanian).pdf"
-                          target="_blank" method="post">
-                        <input type="submit" value="View Certificate"/>
-                    </form>
-                </div>
-                <div class="clearfix"></div>
-                <hr>
-            </div>
-        </div>
-    </div>
-
-    <div data-aos="slide-up" class="col-md-2 middle">
-        <i class="fa fa-hourglass-end" aria-hidden="true"></i>
-    </div>
-
-    <div class="col-md-5 education-w3l">
-        <h3 data-aos="zoom-in" class="w3l_head three">My Experience:</h3>
-        <hr>
-        <div class="education-agile-grids">
-            <div class="education-agile-w3l">
-                <div class="education-agile-w3l-year">
-                    <h4>2022-now</h4>
-                    <h6><font color="black"><p id="TimeInCurrentEmployer"></p></font></h6>
-                    <h6 style="text-decoration:underline;"><a href="https://wallester.com/"
-                                                              style="color:#ff4f81" target="_blank"><br><img
-                            src="images/wallester-pavel-psecuk.svg" alt="Wallester AS"></a>
-					</h6>
-                </div>
-                <div class="education-agile-w3l-info">
-                    <h4>Senior DevOps Engineer</h4>
-                    <p>I'm responsible for entire infrastructure and DevOps department establishment - coordinating several engineers together, integrating newcomers, setting up all new processes, proactively pushing DevOps Best Practices (automation, observability, CI/CD, GitOps), strategic infrastructure improvements, working with PCI-DSS certified systems, huge database migrations, cluster upgrades, monitoring system refactoring and other.</p><br>
-                </div>
-                <div class="clearfix"></div>
-                <hr>
-            </div>
-
-            <div class="education-agile-w3l">
-                <div class="education-agile-w3l-year">
-                    <h4>2019-2022</h4>
-                    <h6><font color="black">2,5 years</font></h6>
-                    <h6 style="text-decoration:underline;"><a href="https://www.breakwater.ee/"
-                                                              style="color:#ff4f81" target="_blank"><br><img
-                            src="images/breakwater_technology_ou.PNG" alt="Breakwater Technology"></a>
-					</h6>
-                </div>
-                <div class="education-agile-w3l-info">
-                    <h4>DevOps Engineer</h4>
-                    <p>I am a member of an agile software development team. My primary focus is create, configure, and maintain CI/CD pipelines, environments and tools, 3rd line support (help first and second with technical questions and investigations), monitor the production and non-production environments to identify bottlenecks and proactive solutions for improvements, automate business processes. I'm in contact with third-party providers in order to solve problems also reporting bugs and improvements to product owner and development team. I participate in sprint planning, task estimation, testing, bug reporting, deploying software, improving the development and release process together with the development team.</p><br>
-                    <form action="" target="_blank" method="post">
-                        <font color="#aca7a7"><input type="submit" value="View Recommendation Letter" disabled/>
-                        </font></form>
-                </div>
-                <div class="clearfix"></div>
-                <hr>
-            </div>
-            
-            <div class="education-agile-w3l">
-                <div class="education-agile-w3l-year">
-                    <h4>3-12/2019</h4>
-                    <h6><font color="black">9 months</font></h6>
-                    <h6 style="text-decoration:underline;"><a href="https://ee.kuehne-nagel.com/en_gb/"
-                                                              style="color:#ff4f81" target="_blank"><br><img
-                            src="images/kn.jpg" alt="Kuehne+Nagel IT center"></a>
-					</h6>
-                </div>
-                <div class="education-agile-w3l-info">
-                    <h4>Application/System Engineer</h4>
-                    <p>I provide 2nd line expertise and technical support for enterprise IT applications. It's required
-                        to know Linux, Java, SQL, Oracle DB, Logs, basics of logistics and more to perform my daily
-                        tasks. I also attend internal Java school provided by employer. B2B support mainly.</p><br>
-                    <form action="" target="_blank" method="post">
-                        <font color="#aca7a7"><input type="submit" value="View Recommendation Letter" disabled/>
-                        </font></form>
-                </div>
-                <div class="clearfix"></div>
-                <hr>
-            </div>
-            
-            <div class="education-agile-w3l">
-                <div class="education-agile-w3l-year">
-                    <h4>2015-2019</h4><h6><font color="black">4 years</font></h6>
-                    <h6 style="text-decoration:underline;"><a href="https://www.tieto.com" style="color:#ff4f81"
-                                                              target="_blank"><br><img src="images/tieto.png"
-																					   alt="Tieto"></a>
-					</h6>
-                </div>
-                <div class="education-agile-w3l-info">
-                    <h4>Senior IT Specialist</h4>
-                    <p>My main duties are to offer IT support services to Lithuanian/English speaking customers, solve IT specific issues, administrate and complement databases, detect and report bugs, participate in different key projects and management meetings, train newhires, maintain knowledge base and other. B2B and B2C support.</p>
-                    <br>
-                    <form action="/web/viewer.html?file=%2FRecommendation_letter(Tieto).pdf" target="_blank"
-                          method="post">
-                        <input type="submit" value="View Recommendation Letter"/>
-                    </form>
-
-                </div>
-                <div class="clearfix"></div>
-                <hr>
-            </div>
-            <div class="education-agile-w3l">
-                <div class="education-agile-w3l-year">
-                    <h4>2013-2014</h4><h6><font color="black">1,5 years</font></h6>
-                    <h6 style="text-decoration:underline;"><a href="https://www.arvato.com" style="color:#ff4f81"
-                                                              target="_blank"><br><img src="images/Arvato.png"
-                                                                                       alt="Arvato"></a><img
-							src="images/MS_logo.png" alt="Microsoft">
-					</h6>
-                </div>
-
-                <div class="education-agile-w3l-info">
-                    <h4>Customer Service Representative</h4>
-                    <p>I handle Microsoft product installation and licensing issues, user administration requests over
-                        the phone, email and chat for Lithuanian/Russian end-users. B2C support mainly.</p>
-                    <br>
-                    <form action="/web/viewer.html?file=%2FRecommendation_letter(Arvato).pdf" target="_blank"
-                          method="post">
-                        <input type="submit" value="View Recommendation Letter"/>
-                    </form>
-
-                </div>
-                <div class="clearfix"></div>
-                <hr>
-            </div>
-            <div class="education-agile-w3l two">
-                <div class="education-agile-w3l-year">
-                    <h4>2012-2013</h4><h6><font color="black">1 year</font></h6>
-                    <h6><br>JT Company</h6>
-                </div>
-                <div class="education-agile-w3l-info">
-                    <h4>IT Administrator</h4>
-                    <p>As on-site IT specialist I was responsible for servers/workstations/printers set-up and
-                        accessibility (uptime), software and hardware maintenance service, monitoring and fixing
-                        production issues. B2B support.</p>
-                </div>
-                <div class="clearfix"></div>
-                <hr>
-            </div>
-            <div class="education-agile-w3l">
-                <div class="education-agile-w3l-year last">
-                    <h4>2009-2015</h4><h6><font color="black">6 years</font></h6>
-                    <a href="https://web.archive.org/web/20160722030024/http://www.ewar.lt/en/" style="color:#ff4f81"
-                       target="_blank"><img src="images/ewar_logo_2013.png" alt="EWar"></a>
-                </div>
-                <div class="education-agile-w3l-info last">
-                    <h4>Project Owner</h4>
-                    <p>I owned quite big gaming project which was hosted on 20+ virtual Linux servers and had different game selection like Counter-Strike, GTA, Minecraft, other. I was responsible for AMXX plug-in development/modification, php/html/css/ipboard website development, mySQL database, different monitoring and marketing solutions, automated shell scripts, 100+ staff members.</p>
-                    <br>
-                    <form action="https://web.archive.org/web/20160722030024/http://www.ewar.lt/en/" target="_blank"
-                          method="post">
-                        <input type="submit" value="View demo"/>
-                    </form>
-
-                </div>
-                <div class="clearfix"></div>
-                <hr>
-            </div>
-        </div>
-    </div>
-    <div class="clearfix"></div>
-</div>
-<!-- //education -->
-
-
-<!-- Portfolio -->
-<p><a name="portfolio"></a></p>
-<div class="portfolio" id="portfolio">
-    <h3 data-aos="zoom-in">Portfolio</h3>
-
-    <div class="tabs tabs-style-bar">
-        <nav>
-            <ul>
-                <li><a href="#section-bar-1" class="icon icon-box"><span>Projects</span></a></li>
-                <li><a href="#section-bar-2" class="icon icon-upload"><span>Git</span></a></li>
-            </ul>
-        </nav>
-
-        <!-- bootstrap-modal-pop-up -->
-        <!-- modal #2-->
-        <div class="modal about-modal fade" id="myModal2" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <div align="right">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                    <div class="modal-body">
-                        <div class="gallery-grids">
-                            <center>
-                                <div class="col-md-4 col-sm-4 gallery-top">
-                                    <a href="images/portfolio/project1/1.png" class="swipebox2">
-                                        <figure class="effect-bubba">
-                                            <img src="images/portfolio/project1/1.png" alt="" class="img-responsive">
-                                        </figure>
-                                    </a>
-                                </div>
-
-                                <div class="col-md-4 col-sm-4 gallery-top">
-                                    <a href="images/portfolio/project1/2.png" class="swipebox2">
-                                        <figure class="effect-bubba">
-                                            <img src="images/portfolio/project1/2.png" alt="" class="img-responsive">
-                                        </figure>
-                                    </a>
-                                </div>
-
-                                <div class="col-md-4 col-sm-4 gallery-top">
-                                    <a href="images/portfolio/project1/3.png" class="swipebox2">
-                                        <figure class="effect-bubba">
-                                            <img src="images/portfolio/project1/3.png" alt="" class="img-responsive">
-                                        </figure>
-                                    </a>
-                                </div>
-                            </center>
-                            <div class="about-modal wthree">
-                                <h3><span><br>Rimgova.lt - simple website</span></h3>
-                                <center><h6>( 2011 )</h6></center>
-                                <ul class="address">
-                                    <li>
-                                        <ul class="agileits-address-text ">
-                                            <center>
-                                                <button class="btn success">Completed</button>
-                                            </center>
-                                            <!--<br><center><button class="btn default">In progress...</button>-->
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <ul class="agileits-address-text">
-                                            <li><b>Difficulty:</b></li>
-                                            <br>
-                                            <li><span style="color:orange" class="fa fa-star"></span>
-                                                <span style="color:grey" class="fa fa-star"></span>
-                                                <span style="color:grey" class="fa fa-star"></span>
-                                                <span style="color:grey" class="fa fa-star"></span>
-                                                <span style="color:grey" class="fa fa-star"></span>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <ul class="agileits-address-text">
-                                            <li><b>Tools used:</b></li>
-                                            <br>
-                                            <li>HTML/CSS, Linux, ssh, SFTP & other.</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <ul class="agileits-address-text">
-                                            <li><b>Description:</b></li>
-                                            <br>
-                                            <li>Simple HTML website built for customer. Spent few weeks. Demo is
-                                                available <a href="http://www.rimgova.lt/" target="_blank"><u>here.</u></a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- //modal #2 -->
-        <!-- //bootstrap-modal-pop-up -->
-
-        <!-- bootstrap-modal-pop-up -->
-        <!-- modal #3-->
-        <div class="modal about-modal fade" id="myModal3" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <div align="right">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                    <div class="modal-body">
-                        <div class="gallery-grids">
-                            <center>
-                                <div class="col-md-4 col-sm-4 gallery-top">
-                                    <a href="images/portfolio/project2/1.PNG" class="swipebox3">
-                                        <figure class="effect-bubba">
-                                            <img src="images/portfolio/project2/1.PNG" alt="" class="img-responsive">
-                                        </figure>
-                                    </a>
-                                </div>
-
-                                <div class="col-md-4 col-sm-4 gallery-top">
-                                    <a href="images/portfolio/project2/2.PNG" class="swipebox3">
-                                        <figure class="effect-bubba">
-                                            <img src="images/portfolio/project2/2.PNG" alt="" class="img-responsive">
-                                        </figure>
-                                    </a>
-                                </div>
-
-                                <div class="col-md-4 col-sm-4 gallery-top">
-                                    <a href="images/portfolio/project2/3.PNG" class="swipebox3">
-                                        <figure class="effect-bubba">
-                                            <img src="images/portfolio/project2/3.PNG" alt="" class="img-responsive">
-                                        </figure>
-                                    </a>
-                                </div>
-
-                                <div class="col-md-4 col-sm-4 gallery-top">
-                                    <a href="images/portfolio/project2/4.PNG" class="swipebox3">
-                                        <figure class="effect-bubba">
-                                            <img src="images/portfolio/project2/4.PNG" alt="" class="img-responsive">
-                                        </figure>
-                                    </a>
-                                </div>
-
-                                <div class="col-md-4 col-sm-4 gallery-top">
-                                    <a href="images/portfolio/project2/5.PNG" class="swipebox3">
-                                        <figure class="effect-bubba">
-                                            <img src="images/portfolio/project2/5.PNG" alt="" class="img-responsive">
-                                        </figure>
-                                    </a>
-                                </div>
-
-                                <div class="col-md-4 col-sm-4 gallery-top">
-                                    <a href="images/portfolio/project2/6.PNG" class="swipebox3">
-                                        <figure class="effect-bubba">
-                                            <img src="images/portfolio/project2/6.PNG" alt="" class="img-responsive">
-                                        </figure>
-                                    </a>
-                                </div>
-                            </center>
-                            <div class="about-modal wthree">
-                                <h3><span><br>EWar.Lt - gaming project</span></h3>
-                                <center><h6>( 2009-2015 )</h6></center>
-                                <ul class="address">
-                                    <li>
-                                        <ul class="agileits-address-text ">
-                                            <center>
-                                                <button class="btn success">Completed</button>
-                                            </center>
-                                            <!--<br><center><button class="btn default">In progress...</button>-->
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <ul class="agileits-address-text">
-                                            <li><b>Difficulty:</b></li>
-                                            <br>
-                                            <li><span style="color:orange" class="fa fa-star"></span>
-                                                <span style="color:orange" class="fa fa-star"></span>
-                                                <span style="color:orange" class="fa fa-star"></span>
-                                                <span style="color:orange" class="fa fa-star"></span>
-                                                <span style="color:grey" class="fa fa-star"></span>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <ul class="agileits-address-text">
-                                            <li><b>Tools used:</b></li>
-                                            <br>
-                                            <li>Java, PHP, HTML/CSS/JS, SQL, mySQL, IPBoard, phpmyadmin, SEO (google
-                                                analytics), Zabbix, Linux Debian, ssh, SFTP, Bash/shell scripting &
-                                                other.
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <ul class="agileits-address-text">
-                                            <li><b>Description:</b></li>
-                                            <br>
-                                            <li>Game project I made from scratch was based on ~20 virtual Linux servers,
-                                                >100 staff members, Java/SQL coded game files, mySQL database, different
-                                                monitoring and marketing solutions, automated bash/shell scripts,
-                                                php/html/css/sql website, IPBoard forum page & other. I spent there 6
-                                                years and left due to lack of spare time. Archived demo is still
-                                                available <a
-                                                        href="https://web.archive.org/web/20160722030024/http://www.ewar.lt/en/"
-                                                        target="_blank"><u>here.</u></a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- //modal #3 -->
-        <!-- //bootstrap-modal-pop-up -->
-
-        <!-- bootstrap-modal-pop-up -->
-        <!-- modal #4-->
-        <div class="modal about-modal fade" id="myModal4" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <div align="right">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                    <div class="modal-body">
-                        <div class="gallery-grids">
-                            <center>
-                                <div class="col-md-4 col-sm-4 gallery-top">
-                                    <a href="images/portfolio/project3/1.png" class="swipebox4">
-                                        <figure class="effect-bubba">
-                                            <img src="images/portfolio/project3/1.png" alt="" class="img-responsive">
-                                        </figure>
-                                    </a>
-                                </div>
-
-                                <div class="col-md-4 col-sm-4 gallery-top">
-                                    <a href="images/portfolio/project3/2.png" class="swipebox4">
-                                        <figure class="effect-bubba">
-                                            <img src="images/portfolio/project3/2.png" alt="" class="img-responsive">
-                                        </figure>
-                                    </a>
-                                </div>
-
-                                <div class="col-md-4 col-sm-4 gallery-top">
-                                    <a href="images/portfolio/project3/3.png" class="swipebox4">
-                                        <figure class="effect-bubba">
-                                            <img src="images/portfolio/project3/3.png" alt="" class="img-responsive">
-                                        </figure>
-                                    </a>
-                                </div>
-                            </center>
-                            <div class="about-modal wthree">
-                                <h3><span><br>WorldGamers - gaming project</span></h3>
-                                <center><h6>( 2016-2018 )</h6></center>
-                                <ul class="address">
-                                    <li>
-                                        <ul class="agileits-address-text ">
-                                            <center>
-                                                <button class="btn success">Completed</button>
-                                            </center>
-                                            <!--<br><center><button class="btn default">In progress...</button>-->
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <ul class="agileits-address-text">
-                                            <li><b>Difficulty:</b></li>
-                                            <br>
-                                            <li><span style="color:orange" class="fa fa-star"></span>
-                                                <span style="color:orange" class="fa fa-star"></span>
-                                                <span style="color:orange" class="fa fa-star"></span>
-                                                <span style="color:grey" class="fa fa-star"></span>
-                                                <span style="color:grey" class="fa fa-star"></span>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <ul class="agileits-address-text">
-                                            <li><b>Tools used:</b></li>
-                                            <br>
-                                            <li>HTML/CSS/JS, SQL, IPBoard, Linux, ssh, SFTP, SEO (Google analytics),
-                                                bash/shell scripting & other.
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <ul class="agileits-address-text">
-                                            <li><b>Description:</b></li>
-                                            <br>
-                                            <li>Pretty big gaming project owned more than 100 different servers all over
-                                                the world. I was developing, testing, launching and maintaining
-                                                Counter-Strike:GO gaming servers. Also I was part of Marketing
-                                                management. I spent there 1,5 years and left due to lack of spare time.
-                                                Archived demo is still available <a
-                                                        href="https://web.archive.org/web/20171112154149/https://worldgamers.org/main/"
-                                                        target="_blank"><u>here.</u></a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- //modal #4 -->
-        <!-- //bootstrap-modal-pop-up -->
-
-
-        <!-- bootstrap-modal-pop-up -->
-        <!-- modal #5-->
-        <div class="modal about-modal fade" id="myModal5" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <div align="right">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                    <div class="modal-body">
-                        <div class="gallery-grids">
-                            <center>
-                                <div class="col-md-4 col-sm-4 gallery-top">
-                                    <a href="images/portfolio/project4/1.png" class="swipebox5">
-                                        <figure class="effect-bubba">
-                                            <img src="images/portfolio/project4/1.png" alt="" class="img-responsive">
-                                        </figure>
-                                    </a>
-                                </div>
-
-                                <div class="col-md-4 col-sm-4 gallery-top">
-                                    <a href="images/portfolio/project4/2.png" class="swipebox5">
-                                        <figure class="effect-bubba">
-                                            <img src="images/portfolio/project4/2.png" alt="" class="img-responsive">
-                                        </figure>
-                                    </a>
-                                </div>
-
-                                <div class="col-md-4 col-sm-4 gallery-top">
-                                    <a href="images/portfolio/project4/3.png" class="swipebox5">
-                                        <figure class="effect-bubba">
-                                            <img src="images/portfolio/project4/3.png" alt="" class="img-responsive">
-                                        </figure>
-                                    </a>
-                                </div>
-                            </center>
-                            <div class="about-modal wthree">
-                                <h3><span><br>pavelpsec.uk - personal website</span></h3>
-                                <center><h6>( 2019 )</h6></center>
-                                <ul class="address">
-                                    <li>
-                                        <ul class="agileits-address-text ">
-                                            <center>
-                                                <button class="btn success">Completed</button>
-											</center>
-                                                <!--<center><button class="btn default">In progress...</button></center>-->
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <ul class="agileits-address-text">
-                                            <li><b>Difficulty:</b></li>
-                                            <br>
-                                            <li><span style="color:orange" class="fa fa-star"></span>
-                                                <span style="color:orange" class="fa fa-star"></span>
-                                                <span style="color:orange" class="fa fa-star"></span>
-                                                <span style="color:grey" class="fa fa-star"></span>
-                                                <span style="color:grey" class="fa fa-star"></span>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <ul class="agileits-address-text">
-                                            <li><b>Tools used:</b></li>
-                                            <br>
-                                            <li>HTML5/CSS3/JS, Java, PHP, Linux, ssh, SFTP & other.</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <ul class="agileits-address-text">
-                                            <li><b>Description:</b></li>
-                                            <br>
-                                            <li>It is my personal HTML5/CSS3 based website with Java, Javascript and php
-                                                functionality. It is aimed to show my skills, portfolio and overall
-                                                information about me. It took me 4 months to build it.
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- //modal #5 -->
-        <!-- //bootstrap-modal-pop-up -->
-        
-        <!-- bootstrap-modal-pop-up -->
-        <!-- modal #6-->
-        <div class="modal about-modal fade" id="myModal6" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <div align="right">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                    <div class="modal-body">
-                        <div class="gallery-grids">
-                            <center>
-                                <div class="col-md-4 col-sm-4 gallery-top">
-                                    <a href="images/portfolio/project5/1.png" class="swipebox6">
-                                        <figure class="effect-bubba">
-                                            <img src="images/portfolio/project5/1.png" alt="" class="img-responsive">
-                                        </figure>
-                                    </a>
-                                </div>
-
-                                <div class="col-md-4 col-sm-4 gallery-top">
-                                    <a href="images/portfolio/project5/2.png" class="swipebox6">
-                                        <figure class="effect-bubba">
-                                            <img src="images/portfolio/project5/2.png" alt="" class="img-responsive">
-                                        </figure>
-                                    </a>
-                                </div>
-
-                                <div class="col-md-4 col-sm-4 gallery-top">
-                                    <a href="images/portfolio/project5/3.png" class="swipebox6">
-                                        <figure class="effect-bubba">
-                                            <img src="images/portfolio/project5/3.png" alt="" class="img-responsive">
-                                        </figure>
-                                    </a>
-                                </div>
-                            </center>
-                            <div class="about-modal wthree">
-                                <h3><span><br>propercases.com - ecommerce project</span></h3>
-                                <center><h6>( 2019 )</h6></center>
-                                <ul class="address">
-                                    <li>
-                                        <ul class="agileits-address-text ">
-                                            <center>
-                                                <button class="btn success">Completed</button>
-											</center>
-                                                <!--<center><button class="btn default">In progress...</button></center>-->
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <ul class="agileits-address-text">
-                                            <li><b>Difficulty:</b></li>
-                                            <br>
-                                            <li><span style="color:orange" class="fa fa-star"></span>
-                                                <span style="color:orange" class="fa fa-star"></span>
-                                                <span style="color:grey" class="fa fa-star"></span>
-                                                <span style="color:grey" class="fa fa-star"></span>
-                                                <span style="color:grey" class="fa fa-star"></span>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <ul class="agileits-address-text">
-                                            <li><b>Tools used:</b></li>
-                                            <br>
-                                            <li>HTML5/CSS3/JS, Shopify, Paypal, Stripe.</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <ul class="agileits-address-text">
-                                            <li><b>Description:</b></li>
-                                            <br>
-                                            <li>One of my ecommerce projects built on HTML/CSS through Shopify platform. In order to get a profit out of it, my main goal was to built a base and set up marketing channels correctly. Project took me 3 months.
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- //modal #6 -->
-        <!-- //bootstrap-modal-pop-up -->
-        
-         <!-- bootstrap-modal-pop-up -->
-        <!-- modal #7-->
-        <div class="modal about-modal fade" id="myModal7" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <div align="right">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                    <div class="modal-body">
-                        <div class="gallery-grids">
-                            <div class="about-modal wthree">
-                                <h3><span>Social media website - Java/Spring</span></h3>
-                                <center><h6>( 2019 )</h6></center>
-                                <ul class="address">
-                                    <li>
-                                        <ul class="agileits-address-text ">
-                                            <center>
-                                                <button class="btn success">Completed</button>
-											</center>
-                                                <!--<center><button class="btn default">In progress...</button></center>-->
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <ul class="agileits-address-text">
-                                            <li><b>Difficulty:</b></li>
-                                            <br>
-                                            <li><span style="color:orange" class="fa fa-star"></span>
-                                                <span style="color:orange" class="fa fa-star"></span>
-                                                <span style="color:orange" class="fa fa-star"></span>
-                                                <span style="color:grey" class="fa fa-star"></span>
-                                                <span style="color:grey" class="fa fa-star"></span>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <ul class="agileits-address-text">
-                                            <li><b>Tools used:</b></li>
-                                            <br>
-                                            <li>IntelliJ IDEA, Java, Spring, Spring Boot, Javascript, HTML/CSS, Bootstrap, SQL, mySQL.</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <ul class="agileits-address-text">
-                                            <li><b>Description:</b></li>
-                                            <br>
-                                            <li>Our group of 3 people created a simple social media website in 6 days. What we've done is:<br><br>
-• registration and account deactivation;<br>
-• sign in and logout;<br>
-• timeline (ability to publish and view your own posts);<br>
-• feed (ability to see your friends posts, like/unlike and comment them);<br>
-• list of website users and ability to add them as friend;<br>
-• list of your friends.<br><br>
-Entire project was done on IntelliJ IDEA Ultimate. For backend we've used Java Spring Boot framework, for frontend - html, css and javascript (for some pages - bootstrap), for MySQL database - 3rd party online provider (database copy is available on Github).</li>
-                                        </ul>
-                                    </li>
-                                    
-                                    <li>
-                                        <ul class="agileits-address-text">
-                                            <li><b>Demo:</b></li>
-                                            <br>
-                                            <li>
-                                                <video width="100%" controls>
-  <source src="images/video.mp4" type="video/mp4">
-  Your browser does not support HTML5 video.
-</video><br><br><center><u><a href="https://github.com/ppsecuk/Final-Project-Social-Media-Website" target="_blank">Link to Github</a></u></center>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- //modal #7 -->
-        <!-- //bootstrap-modal-pop-up -->
-
-
-        <div class="content-wrap">
-
-            <!-- Tab-1 -->
-            <section id="section-bar-1" class="agileits w3layouts">
-                <br>
-                <ul data-aos="slide-up">
-                    <div class="gallery-grids">
-                        <div class="col-md-4 col-sm-4 gallery-top">
-                            <a href="#" class="" data-toggle="modal" data-target="#myModal2">
-                                <figure class="effect-bubba">
-                                    <img src="images/portfolio/project1/cover.png" alt="" class="img-responsive">
-                                    <figcaption>
-                                        <h4>www.rimgova.lt - simple website</h4>
-                                        <div class="ribbon">
-                                            <div class="txt">2011</div>
-                                        </div>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                        </div>
-
-                        <div class="col-md-4 col-sm-4 gallery-top">
-                            <a href="#" class="" data-toggle="modal" data-target="#myModal3">
-                                <figure class="effect-bubba">
-                                    <img src="images/portfolio/project2/cover.png" alt="" class="img-responsive">
-                                    <figcaption>
-                                        <h4>www.ewar.lt - gaming project</h4>
-                                        <div class="ribbon">
-                                            <div class="txt">2015</div>
-                                        </div>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                        </div>
-
-                        <div class="col-md-4 col-sm-4 gallery-top">
-                            <a href="#" class="" data-toggle="modal" data-target="#myModal4">
-                                <figure class="effect-bubba">
-                                    <img src="images/portfolio/project3/cover.png" alt="" class="img-responsive">
-                                    <figcaption>
-                                        <h4>www.worldgamers.org - gaming project</h4>
-                                        <div class="ribbon">
-                                            <div class="txt">2018</div>
-                                        </div>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                        </div>
-
-                        <div class="col-md-4 col-sm-4 gallery-top">
-                            <a href="#" class="" data-toggle="modal" data-target="#myModal5">
-                                <figure class="effect-bubba">
-                                    <img src="images/portfolio/project4/cover.png" alt="" class="img-responsive">
-                                    <figcaption>
-                                        <h4>www.pavelpsec.uk - personal website</h4>
-                                        <div class="ribbon">
-                                            <div class="txt">2019</div>
-                                        </div>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                        </div>
-                        
-                        <div class="col-md-4 col-sm-4 gallery-top">
-                            <a href="#" class="" data-toggle="modal" data-target="#myModal6">
-                                <figure class="effect-bubba">
-                                    <img src="images/portfolio/project5/cover.png" alt="" class="img-responsive">
-                                    <figcaption>
-                                        <h4>www.propercases.com - ecommerce project</h4>
-                                        <div class="ribbon">
-                                            <div class="txt">2019</div>
-                                        </div>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                        </div>
-                        
-                        <div class="col-md-4 col-sm-4 gallery-top">
-                            <a href="#" class="" data-toggle="modal" data-target="#myModal7">
-                                <figure class="effect-bubba">
-                                    <img src="images/portfolio/project6/cover.png" alt="" class="img-responsive">
-                                    <figcaption>
-                                        <h4>Social media website - Java/Spring</h4>
-                                        <div class="ribbon">
-                                            <div class="txt">2019</div>
-                                        </div>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                        </div>
-                    </div>
-                </ul>
-            </section>
-            <!-- //Tab-1 -->
-
-            <!-- Tab-2 -->
-            <section id="section-bar-2" class="agileits w3layouts">
-                <br>
-                <div class="gallery-grids">
-                    <div class="col-md-4 col-sm-4 gallery-top">
-                        <a href="https://github.com/ppsecuk" class="" target="_blank">
-                            <figure class="effect-bubba">
-                                <img src="images/github-universe.jpg" alt="" class="img-responsive">
-                                <figcaption>
-                                    <h4>Go to Github</h4>
-                                </figcaption>
-                            </figure>
-                        </a>
-                    </div>
-
-                    <div class="col-md-4 col-sm-4 gallery-top">
-                        <a href="https://bitbucket.org/%7B32933574-ab96-4706-8202-d926ef8d1a79%7D/" class=""
-                           target="_blank">
-                            <figure class="effect-bubba">
-                                <img src="images/bitbucket-vector-logo.png" alt="" class="img-responsive">
-                                <figcaption>
-                                    <h4>Go to Bitbucket</h4>
-                                </figcaption>
-                            </figure>
-                        </a>
-                    </div>
-                </div>
-            </section>
-            <!-- //Tab-2 -->
-
-            <!-- Tab-3 -->
-            <section id="section-bar-3" class="agileits w3layouts">
-                <br>
-                <ul data-aos="slide-up">
-                    <div class="gallery-grids">
-                        <div class="col-md-4 col-sm-4 gallery-top">
-                            <a href="#" class="" data-toggle="modal" data-target="#myModal2">
-                                <figure class="effect-bubba">
-                                    <img src="images/portfolio/project1/cover.png" alt="" class="img-responsive">
-                                    <figcaption>
-                                        <h4>www.rimgova.lt - simple website</h4>
-                                        <div class="ribbon">
-                                            <div class="txt">2011</div>
-                                        </div>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                        </div>
-                    </div>
-                </ul>
-            </section>
-            <!-- //Tab-3 -->
-            <!-- //Content -->
-        </div>
-		<!-- //Tabs -->
-    </div>
-</div>
-
-<!-- //Portfolio -->
-
-<!-- contact -->
-<div class="contact" id="contact">
-    <div class="container">
-        <div class="col-md-6 contact-left">
-            <h3 data-aos="zoom-in">contact me</h3>
-            <br>
-            <ul class="top-links">
-                <li data-aos="flip-right"><a href="https://www.linkedin.com/in/pavel-psecuk/" target="_blank"><i
-                        class="fa fa-linkedin"></i></a></li>
-                <li data-aos="flip-right"><a href="https://www.freelancer.com/u/Reed90?w=f" target="_blank"><i
-                        class="fa fa-coffee"></i></a></li>
-            </ul>
-            <br>or send an email:<br>
-            <br>
-            <form method="post" name="contactform" action="send_form_email.php">
-                <div class="col-md-6 agileits_agile_about_mail_left">
-                    <input type="text" name="first_name" placeholder="Name" required="" maxlength="50">
-                    <input type="email" name="email" placeholder="Email" required="">
-                    <input type="text" name="antispam" placeholder="2 + 5 = ?" required="" pattern="[7]">
-                </div>
-                <div class="clearfix"></div>
-                <textarea name="comments" placeholder="Message..." required=""></textarea>
-                <input type="submit" value="Send">
-            </form>
-        </div>
-    </div>
-    <div class="clearfix"></div>
-</div>
-<!-- //contact -->
-
-<!-- copyright -->
-<div class="copyright-agile">
-    <div class="container">
-        <h4></h4>
-        <p>© 2023. All rights reserved | Designed by <a href="http://w3layouts.com" target="_blank">W3layouts</a> |
-            Edited by Pavel Psecuk</p>
-        <div class="clearfix"></div>
-    </div>
-</div>
-<!-- copyright -->
-
-<!-- js -->
-<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-<script type="text/javascript" src="js/wrevRq.js"></script>
-<!-- for bootstrap working -->
-<script src="js/bootstrap.js"></script>
-<!-- //for bootstrap working -->
-<!-- //js -->
-
-<!-- Gallery-Tab-JavaScript -->
-<script src="js/cbpFWTabs.js"></script>
-<script>
-				(function() {
-					[].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
-						new CBPFWTabs( el );
-					});
-				})();
-
-</script>
-<!-- //Gallery-Tab-JavaScript -->
-<!-- Swipe-Box-JavaScript -->
-<script src="js/jquery.swipebox.min.js"></script>
-<script type="text/javascript">
-					jQuery(function($) {
-						$(".swipebox").swipebox();
-					});
-
-</script>
-<!-- //Swipe-Box-JavaScript -->
-
-<!-- Swipe-Box-JavaScript -->
-<script src="js/jquery.swipebox.min.js"></script>
-<script type="text/javascript">
-					jQuery(function($) {
-						$(".swipebox2").swipebox();
-					});
-
-</script>
-<!-- //Swipe-Box-JavaScript -->
-
-<!-- Swipe-Box-JavaScript -->
-<script src="js/jquery.swipebox.min.js"></script>
-<script type="text/javascript">
-					jQuery(function($) {
-						$(".swipebox3").swipebox();
-					});
-
-</script>
-<!-- //Swipe-Box-JavaScript -->
-
-<!-- Swipe-Box-JavaScript -->
-<script src="js/jquery.swipebox.min.js"></script>
-<script type="text/javascript">
-					jQuery(function($) {
-						$(".swipebox4").swipebox();
-					});
-
-</script>
-<!-- //Swipe-Box-JavaScript -->
-
-<!-- Swipe-Box-JavaScript -->
-<script src="js/jquery.swipebox.min.js"></script>
-<script type="text/javascript">
-					jQuery(function($) {
-						$(".swipebox5").swipebox();
-					});
-
-</script>
-<!-- //Swipe-Box-JavaScript -->
-
-<!-- Swipe-Box-JavaScript -->
-<script src="js/jquery.swipebox.min.js"></script>
-<script type="text/javascript">
-					jQuery(function($) {
-						$(".swipebox6").swipebox();
-					});
-
-</script>
-<!-- //Swipe-Box-JavaScript -->
-
-<!-- Scrolling Nav JavaScript -->
-<script src="js/scrolling-nav.js"></script>
-<!-- //fixed-scroll-nav-js -->
-
-<script src="js/index.js"></script><!-- skills bars JS FILE-->
-
-<!-- animation effects-js files-->
-<script src="js/aos.js"></script><!-- //animation effects-js-->
-<script src="js/aos1.js"></script><!-- //animation effects-js-->
-<!-- animation effects-js files-->
-
-<!-- //here starts scrolling icon -->
-<script src="js/SmoothScroll.min.js"></script>
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
-<!-- here stars scrolling script -->
-<script type="text/javascript">
-		$(document).ready(function() {
-			/*
-				var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-				};
-			*/
-								
-			$().UItoTop({ easingType: 'easeOutQuart' });
-								
-			});
-
-</script>
-<!-- //here ends scrolling script -->
-<!-- //here ends scrolling icon -->
-
-<!-- scrolling script -->
-<script type="text/javascript">
-	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event){		
-			event.preventDefault();
-			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-		});
-	});
-
-</script>
-<!-- //scrolling script -->
+</footer>
 
 <script>
-// Set the date we're counting down to
-var countDownDate = new Date("Jan 1, 2018 15:37:25").getTime();
+    (() => {
+        const header = document.querySelector(".site-header");
+        const nav = document.querySelector(".nav");
+        const toggle = document.querySelector(".menu-toggle");
+        const links = document.querySelectorAll(".nav-links a");
 
-// Update the count down every 1 second
-var x = setInterval(function() {
+        if (!nav || !toggle) {
+            return;
+        }
 
-  // Get today's date and time
-  var now = new Date().getTime();
-    
-  // Find the distance between now and the count down date
-  var distance = now - countDownDate;
-    
-  // Time calculations for days, hours, minutes and seconds
-  var years = Math.floor(distance / (1000 * 60 * 60 * 24) / 365);
-    
-  // Output the result in an element with id="TimeInUdemy"
-  document.getElementById("TimeInUdemy").innerHTML = years + " year(s) ";
-    
-  // If the count down is over, write some text 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("TimeInUdemy").innerHTML = "EXPIRED";
-  }
-}, 1000);
+        const setOpen = (open) => {
+            nav.dataset.menuOpen = String(open);
+            toggle.setAttribute("aria-expanded", String(open));
+            header?.classList.toggle("is-menu-open", open);
+        };
 
+        toggle.addEventListener("click", () => {
+            setOpen(nav.dataset.menuOpen !== "true");
+        });
+
+        links.forEach((link) => {
+            link.addEventListener("click", () => setOpen(false));
+        });
+
+        setOpen(false);
+    })();
+
+    (() => {
+        const header = document.querySelector(".site-header");
+
+        if (!header) {
+            return;
+        }
+
+        const updateHeader = () => {
+            header.classList.toggle("is-scrolled", window.scrollY > 10);
+        };
+
+        updateHeader();
+        window.addEventListener("scroll", updateHeader, { passive: true });
+    })();
+
+    (() => {
+        const scrollCue = document.querySelector(".scroll-cue");
+
+        if (!scrollCue) {
+            return;
+        }
+
+        const updateScrollCue = () => {
+            const isScrolled = window.scrollY > 4;
+
+            scrollCue.classList.toggle("is-hidden", isScrolled);
+            scrollCue.setAttribute("aria-hidden", String(isScrolled));
+            scrollCue.tabIndex = isScrolled ? -1 : 0;
+        };
+
+        updateScrollCue();
+        window.addEventListener("scroll", updateScrollCue, { passive: true });
+    })();
 </script>
 
-<script>
-// Set the date we're counting down to
-var countDownDate2 = new Date("May 1, 2022 08:00:00").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-    
-  // Find the distance between now and the count down date
-  var distance = now - countDownDate2;
-    
-  // Time calculations for days, hours, minutes and seconds
-  var years = Math.floor(distance / (1000 * 60 * 60 * 24) / 365);
-    
-  // Output the result in an element with id="TimeInCurrentEmployer"
-  document.getElementById("TimeInCurrentEmployer").innerHTML = years + " year(s) ";
-    
-  // If the count down is over, write some text 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("TimeInCurrentEmployer").innerHTML = "Not started yet";
-  }
-}, 1000);
-
-</script>
-<script src="/js/cookieconsent.min.js" data-cfasync="false"></script>
-<script>
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "rgba(25, 25, 25, 0.85)"
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.pavelpsec.uk/#website",
+      "url": "https://www.pavelpsec.uk/",
+      "name": "Pavel Psecuk",
+      "alternateName": [
+        "Psecuk",
+        "Pavel Psecuk personal website"
+      ],
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://www.pavelpsec.uk/#person"
+      }
     },
-    "button": {
-      "background": "#f1d600"
+    {
+      "@type": "ProfilePage",
+      "@id": "https://www.pavelpsec.uk/#profile",
+      "url": "https://www.pavelpsec.uk/",
+      "name": "Pavel Psecuk - AI-Driven DevOps Engineer and Tech Lead",
+      "description": "Professional profile of Pavel Psecuk, AI-driven DevOps Engineer and Tech Lead focused on cloud platforms, Kubernetes, infrastructure automation, observability, security, and reliable delivery.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://www.pavelpsec.uk/#website"
+      },
+      "mainEntity": {
+        "@id": "https://www.pavelpsec.uk/#person"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.pavelpsec.uk/#person",
+      "name": "Pavel Psecuk",
+      "givenName": "Pavel",
+      "familyName": "Psecuk",
+      "alternateName": [
+        "Psecuk",
+        "Pavel Psecuk",
+        "Pavel Psecuk DevOps Engineer"
+      ],
+      "url": "https://www.pavelpsec.uk/",
+      "image": "https://www.pavelpsec.uk/images/pavel_psecuk_portrait.jpg",
+      "jobTitle": "AI-Driven DevOps Engineer and Tech Lead",
+      "email": "mailto:pavel.psecuk@gmail.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/pavel-psecuk/",
+        "https://github.com/ppsecuk"
+      ],
+      "knowsAbout": [
+        "AI-Assisted Engineering",
+        "DevOps",
+        "Kubernetes",
+        "AWS",
+        "Terraform",
+        "CI/CD",
+        "Observability",
+        "PCI-DSS"
+      ]
     }
-  },
-  "content": {
-    "href": "https://cookieconsent.osano.com/articles/cookie-laws/"
-  }
-});
-
+  ]
+}
 </script>
-
 </body>
 </html>
